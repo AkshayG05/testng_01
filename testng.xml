@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+  
+  <parameter name = "URL" value = "www.google.com"/>
+  
+  <parameter name = "URL" value = "www.yahoo.com"/>
+   
+    <classes>
+      <class name="Test.test2"/><!-- this for class to run  -->  
+      
+      <class name="Test.Test3"><!-- remove the tag as you want to modify this class with methods-->  
+      <methods>
+      <include name="mamos6"></include> <!-- this for particular class method output to run include method used-->  
+      </methods>
+       <methods>
+      <exclude name="momos.*"></exclude> <!-- this for particular class method output to run exclude method used-->  
+      </methods> <!-- this will elimanate all the methods which contain name momos-->  
+       </class>
+      <class name ="Test.test1"/>
+      
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
